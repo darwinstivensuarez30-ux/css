@@ -1,60 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Redaction+10:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --color_primario: #6c7a6c;
+  --color_secundario: #4f4d46;
+  --color_fondo: #a4ba36;
+  --color_texto: #0d0d0f;
+  --espacio_mediano: 16px;
+  --espacio_grande: 24px;
+}
+
 body {
   font-family: sans-serif;
-  color: #333333;
   display: block;
   padding: 20px;
-  color: #2980b9;
+
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 header {
-  background-color: blueviolet;
   background-image: url(css-image-styling.jpg);
   background-size: cover;
   background-position: center;
 }
 
 header nav ul li a {
-  background-color: #333333;
   height: auto;
-  color: #01080d;
+  color: var(--color_primario);
   text-decoration: none;
-  background-color: aquamarine;
 }
 
 aside {
-  background-color: #333333;
+  background-color: var(--color_primario);
 }
 aside ul li a {
-  color: #27ae60;
+  color: var(--color_texto);
   text-decoration: none;
 }
 
 footer {
-  background-color: aquamarine;
+  background-color: var(--color_secundario);
 }
 footer ul li a {
-  color: #03bb28;
+  color: var(--color_texto);
   text-decoration: none;
 }
 
+main article h2 {
+  color: var(--color_fondo);
+}
 .btn-comprar {
-  color: rgb(27, 185, 9);
-  background-color: #1f0aa8;
-  padding: 8px 12px;
-  border-radius: 4px;
-}
-
-#btn-destacado {
-  color: rgb(9, 199, 85);
+  color: rgb(24, 160, 9);
+  background-color: var(--color_secundario);
+  padding: var(--espacio_grande), var(--espacio_grande);
+  border-radius: var(--espacio_mediano);
 }
 
 article {
-  background-color: blanchedalmond;
-}
-article {
-  background: #c31919;
-}
-
-main {
-  background-color: rgb(182, 188, 188);
+  background: #787569;
 }
