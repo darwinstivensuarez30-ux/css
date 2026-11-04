@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+  color: #333333;
+  display: block;
+  padding: 20px;
+  color: #2980b9;
+}
+
+header {
+  background-color: blueviolet;
+  background-image: url(css-image-styling.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header nav ul li a {
+  background-color: #333333;
+  height: auto;
+  color: #01080d;
+  text-decoration: none;
+  background-color: aquamarine;
+}
+
+aside {
+  background-color: #333333;
+}
+aside ul li a {
+  color: #27ae60;
+  text-decoration: none;
+}
+
+footer {
+  background-color: aquamarine;
+}
+footer ul li a {
+  color: #03bb28;
+  text-decoration: none;
+}
+
+.btn-comprar {
+  color: rgb(27, 185, 9);
+  background-color: #1f0aa8;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+#btn-destacado {
+  color: rgb(9, 199, 85);
+}
+
+article {
+  background-color: blanchedalmond;
+}
+article {
+  background: #c31919;
+}
+
+main {
+  background-color: rgb(182, 188, 188);
+}
