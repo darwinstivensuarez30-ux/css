@@ -1,9 +1,18 @@
+:root {
+  --color-primario: #2980b9;
+  --color-secundario: #f39c12;
+  --color-texto: #c0b5b5;
+  --color-texto-claro: #ffffff;
+  --color-marron: #8b5e3c;
+  --color-marron-claro: #d7b899;
+  --color-negro: #000000;
+}
+
 body {
   font-family: sans-serif;
-  color: #333333;
-  display: block;
+  color: var(--color-texto);
+  background-color: var(--color-marron-claro);
   padding: 20px;
-  color: #2980b9;
 }
 
 header {
@@ -14,7 +23,6 @@ header {
 }
 
 header nav ul li a {
-  background-color: #333333;
   height: auto;
   color: #01080d;
   text-decoration: none;
@@ -25,23 +33,27 @@ aside {
   background-color: #333333;
 }
 aside ul li a {
-  color: #27ae60;
+  color: #2ecc71;
   text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 footer {
   background-color: aquamarine;
 }
 footer ul li a {
-  color: #03bb28;
+  color: #0b5d1e;
   text-decoration: none;
 }
 
 .btn-comprar {
-  color: rgb(27, 185, 9);
-  background-color: #1f0aa8;
+  color: var(--color-texto-claro);
+  background-color: #0c8a1d;
   padding: 8px 12px;
   border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
 }
 
 #btn-destacado {
@@ -49,12 +61,55 @@ footer ul li a {
 }
 
 article {
-  background-color: blanchedalmond;
-}
-article {
-  background: #c31919;
+  background-color: var(--color-marron);
+  color: var(--color-texto-claro);
 }
 
 main {
-  background-color: rgb(182, 188, 188);
+  background-color: var(--color-marron-claro);
+}
+
+aside ul li a:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+}
+
+aside ul li a::before {
+  content: "• ";
+}
+
+aside ul li a:focus {
+  background-color: var(--color-negro);
+  color: var(--color-texto-claro);
+  outline: 3px solid var(--color-secundario);
+  outline-offset: 2px;
+}
+
+.btn-comprar:hover,
+#btn-destacado:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+}
+
+.btn-comprar:focus,
+#btn-destacado:focus {
+  background-color: var(--color-negro);
+  color: var(--color-texto-claro);
+  outline: 3px solid var(--color-secundario);
+  outline-offset: 2px;
+}
+
+.btn-comprar:active {
+  transform: scale(0.95);
+}
+
+article::after {
+  content: "¡Oferta!";
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  font-weight: bold;
+  border-radius: 4px;
 }
