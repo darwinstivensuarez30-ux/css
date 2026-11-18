@@ -5,6 +5,7 @@
 **1. Variables declaradas**
 
 En el :root declaré estas variables:
+
 - Colores: --color-primario, --color-secundario, --color-fondo,
   --color-fondo-tarjeta, --color-texto, --color-texto-claro, --color-negro,
   --color-encabezado, --color-nav, --color-nav-texto, --color-aside,
@@ -53,4 +54,4 @@ cambiar la insignia lo hago en un solo lugar del CSS.
 
 **Lo que vi en DevTools**
 
-al activar hover vi que el boton cambiaba al pasar el cursor y con before y after que se le agrefaron 2 puntos en filtros y  se agrego oferta al lado de compra
+al activar hover vi que el boton cambiaba al pasar el cursor y con before y after que se le agrefaron 2 puntos en filtros y se agrego oferta al lado de compra
