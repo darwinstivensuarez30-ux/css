@@ -1,115 +1,119 @@
 :root {
-  --color-primario: #2980b9;
-  --color-secundario: #f39c12;
-  --color-texto: #c0b5b5;
-  --color-texto-claro: #ffffff;
-  --color-marron: #8b5e3c;
-  --color-marron-claro: #d7b899;
-  --color-negro: #000000;
+    --color-primario: #2980b9;
+    --color-secundario: #f39c12;
+    --color-texto: #c0b5b5;
+    --color-texto-claro: #ffffff;
+    --color-marron: #8b5e3c;
+    --color-marron-claro: #d7b899;
+    --color-negro: #000000;
 }
 
 body {
-  font-family: sans-serif;
-  color: var(--color-texto);
-  background-color: var(--color-marron-claro);
-  padding: 20px;
+    font-family: sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-marron-claro);
+    padding: 20px;
 }
 
 header {
-  background-color: blueviolet;
-  background-image: url(css-image-styling.jpg);
-  background-size: cover;
-  background-position: center;
+    background-color: blueviolet;
+    background-image: url(css-image-styling.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 header nav ul li a {
-  height: auto;
-  color: #01080d;
-  text-decoration: none;
-  background-color: aquamarine;
+    height: auto;
+    color: #01080d;
+    text-decoration: none;
+    background-color: aquamarine;
 }
 
 aside {
-  background-color: #333333;
+    background-color: #333333;
 }
 aside ul li a {
-  color: #2ecc71;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+    color: #2ecc71;
+    text-decoration: none;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
 
 footer {
-  background-color: aquamarine;
+    background-color: aquamarine;
 }
 footer ul li a {
-  color: #0b5d1e;
-  text-decoration: none;
+    color: #0b5d1e;
+    text-decoration: none;
 }
 
 .btn-comprar {
-  color: var(--color-texto-claro);
-  background-color: #0c8a1d;
-  padding: 8px 12px;
-  border-radius: 4px;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
+    color: var(--color-texto-claro);
+    background-color: #4fe263;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
 }
 
 #btn-destacado {
-  color: rgb(9, 199, 85);
+    color: rgb(9, 199, 85);
 }
 
 article {
-  background-color: var(--color-marron);
-  color: var(--color-texto-claro);
+    background-color: var(--color-marron);
+    color: var(--color-texto-claro);
 }
 
 main {
-  background-color: var(--color-marron-claro);
+    background-color: var(--color-marron-claro);
 }
 
 aside ul li a:hover {
-  background-color: var(--color-secundario);
-  color: var(--color-texto);
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
 }
 
 aside ul li a::before {
-  content: "• ";
+    content: "• ";
 }
 
 aside ul li a:focus {
-  background-color: var(--color-negro);
-  color: var(--color-texto-claro);
-  outline: 3px solid var(--color-secundario);
-  outline-offset: 2px;
+    background-color: var(--color-negro);
+    color: var(--color-texto-claro);
+    outline: 3px solid var(--color-secundario);
+    outline-offset: 2px;
 }
 
 .btn-comprar:hover,
 #btn-destacado:hover {
-  background-color: var(--color-secundario);
-  color: var(--color-texto);
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
 }
 
 .btn-comprar:focus,
 #btn-destacado:focus {
-  background-color: var(--color-negro);
-  color: var(--color-texto-claro);
-  outline: 3px solid var(--color-secundario);
-  outline-offset: 2px;
+    background-color: var(--color-negro);
+    color: var(--color-texto-claro);
+    outline: 3px solid var(--color-secundario);
+    outline-offset: 2px;
 }
 
 .btn-comprar:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 article::after {
-  content: "¡Oferta!";
-  display: inline-block;
-  margin-top: 8px;
-  padding: 4px 10px;
-  background-color: var(--color-secundario);
-  color: var(--color-texto);
-  font-weight: bold;
-  border-radius: 4px;
+    content: "¡Oferta!";
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    font-weight: bold;
+    border-radius: 4px;
 }
