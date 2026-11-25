@@ -1,0 +1,32 @@
+.card__button {
+    color: var(--color-texto-claro);
+    background-color: #4fe263;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
+}
+
+.card__button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}
+
+.card__button:focus {
+    background-color: var(--color-negro);
+    color: var(--color-texto-claro);
+    outline: 3px solid var(--color-secundario);
+    outline-offset: 2px;
+}
+
+.card__button:active {
+    transform: scale(0.95);
+}
+
+
+.btn--destacado {
+    color: rgb(9, 199, 85);
+}

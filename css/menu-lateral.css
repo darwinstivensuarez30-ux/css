@@ -1,0 +1,27 @@
+.menu-lateral {
+    background-color: #333333;
+}
+
+.menu-lateral__link {
+    color: #2ecc71;
+    text-decoration: none;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+.menu-lateral__link:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}
+
+.menu-lateral__link::before {
+    content: "• ";
+}
+
+.menu-lateral__link:focus {
+    background-color: var(--color-negro);
+    color: var(--color-texto-claro);
+    outline: 3px solid var(--color-secundario);
+    outline-offset: 2px;
+}
