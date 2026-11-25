@@ -10,6 +10,8 @@
     --color-marron: #8b5e3c;
     --color-marron-claro: #d7b899;
     --color-negro: #000000;
+    --espaciado-medio: 16px;
+    --espaciado-grande: 24px;
 }
 
 body {
@@ -24,6 +26,9 @@ header {
     background-image: url(css-image-styling.jpg);
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul li a {
@@ -35,7 +40,11 @@ header nav ul li a {
 
 footer {
     background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
 footer ul li a {
     color: #0b5d1e;
     text-decoration: none;
@@ -43,4 +52,25 @@ footer ul li a {
 
 main {
     background-color: var(--color-marron-claro);
+    flex: 1;
+}
+
+main section {
+    display: flex;
+}
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.nav__list {
+    display: flex;
+    gap: var(--espaciado-medio);
 }

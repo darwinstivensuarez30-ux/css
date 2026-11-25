@@ -1,6 +1,20 @@
 .card {
     background-color: var(--color-marron);
     color: var(--color-texto-claro);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.card__description {
+    flex-grow: 1;
+}
+
+.card__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .card::after {
@@ -14,3 +28,6 @@
     border-radius: 4px;
 }
 
+/* Modificador listo para recibir estilos */
+.card--destacada {
+}

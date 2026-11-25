@@ -8,64 +8,80 @@
 </head>
 
 <body>
-  <header>
-    <nav>
+  <div class="app-layout">
+    <header>
+      <nav>
+        <ul class="nav__list">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Catalogo</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-wrapper">
+      <aside class="menu-lateral">
+        <h2>Filtros</h2>
+        <ul>
+          <li><a href="#" class="menu-lateral__link">tenis de Running Pro-Max</a></li>
+          <li><a href="#" class="menu-lateral__link">Camiseta Termica</a></li>
+        </ul>
+      </aside>
+      <main>
+        <section>
+          <article class="card card--destacada">
+            <h2 class="card__title">tenis de Running Pro-Max</h2>
+            <p class="card__description">Zapatillas de alto rendimiento.</p>
+            <div class="card__price-wrapper">
+              <p class="card__price">$120.00</p>
+              <p class="card__price-old"><s>$150.00</s></p>
+            </div>
+            <a href="#" class="card__button">Comprar</a>
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Camiseta Termica</h2>
+            <p class="card__description">Prenda elastica de secado rapido.</p>
+            <div class="card__price-wrapper">
+              <p class="card__price">$35.00</p>
+              <p class="card__price-old"><s>$45.00</s></p>
+            </div>
+            <a href="#" class="card__button btn--secundario">Comprar</a>
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Balon de Futbol</h2>
+            <p class="card__description">Balon profesional para cancha.</p>
+            <div class="card__price-wrapper">
+              <p class="card__price">$45.00</p>
+              <p class="card__price-old"><s>$55.00</s></p>
+            </div>
+            <a href="#" class="card__button">Comprar</a>
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Mochila de Training</h2>
+            <p class="card__description">Resistente y espaciosa.</p>
+            <div class="card__price-wrapper">
+              <p class="card__price">$55.00</p>
+              <p class="card__price-old"><s>$70.00</s></p>
+            </div>
+            <a href="#" class="card__button">Comprar</a>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>2026 Tienda Deportiva</p>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Catalogo</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Youtube</a></li>
+        <li><a href="#">twither</a></li>
       </ul>
-    </nav>
-  </header>
-  <aside class="menu-lateral">
-    <h2>Filtros</h2>
-    <ul>
-      <li><a href="#" class="menu-lateral__link">tenis de Running Pro-Max</a></li>
-      <li><a href="#" class="menu-lateral__link">Camiseta Termica</a></li>
-    </ul>
-  </aside>
-  <main>
-    <section>
-      <article class="card card--destacada">
-        <h2 class="card__title">tenis de Running Pro-Max</h2>
-        <p class="card__description">Zapatillas de alto rendimiento.</p>
-        <p class="card__price">$120.00</p>
-        <a href="#" class="card__button">Comprar</a>
-      </article>
-
-      <article class="card">
-        <h2 class="card__title">Camiseta Termica</h2>
-        <p class="card__description">Prenda elastica de secado rapido.</p>
-        <p class="card__price">$35.00</p>
-        <a href="#" class="card__button btn--secundario">Comprar</a>
-      </article>
-
-      <article class="card">
-        <h2 class="card__title">Balon de Futbol</h2>
-        <p class="card__description">Balon profesional para cancha.</p>
-        <p class="card__price">$45.00</p>
-        <a href="#" class="card__button">Comprar</a>
-      </article>
-
-      <article class="card">
-        <h2 class="card__title">Mochila de Training</h2>
-        <p class="card__description">Resistente y espaciosa.</p>
-        <p class="card__price">$55.00</p>
-        <a href="#" class="card__button">Comprar</a>
-      </article>
-    </section>
-  </main>
-  <footer>
-    <p>2026 Tienda Deportiva</p>
-    <ul>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Youtube</a></li>
-      <li><a href="#">twither</a></li>
-      <li><a href="#">tik tok</a></li>
-      </a></li>
-    </ul>
-  </footer>
+    </footer>
+  </div>
 </body>
 
 </html>

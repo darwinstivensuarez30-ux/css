@@ -6,8 +6,8 @@
     display: inline-block;
     cursor: pointer;
     transition:
-        background-color 0.4s,
-        transform 0.4s;
+        background-color 0.3s,
+        transform 0.3s;
 }
 
 .card__button:hover {
@@ -26,6 +26,9 @@
     transform: scale(0.95);
 }
 
+/* Modificadores */
+.btn--secundario {
+}
 
 .btn--destacado {
     color: rgb(9, 199, 85);
