@@ -1,3 +1,4 @@
+# suba actividad 3
 # Catálogo de Productos
 
 ## Hallazgos: Centralización de Identidad Visual y Espaciado
@@ -5,6 +6,7 @@
 **1. Variables declaradas**
 
 En el :root declaré estas variables:
+
 - Colores: --color-primario, --color-secundario, --color-fondo,
   --color-fondo-tarjeta, --color-texto, --color-texto-claro, --color-negro,
   --color-encabezado, --color-nav, --color-nav-texto, --color-aside,
@@ -31,7 +33,7 @@ valor, así que la página se mantiene uniforme.
 vi que solo hay que cambiar el color que quieras desde arriba y si esta vinculado a otra parte se le cambia porque arriba se hizo+
 
 ---
-
+# subactividad 4
 ## Hallazgos: Pseudoclases y Pseudoelementos
 
 **1. Diferencia entre pseudoclase y pseudoelemento**
@@ -53,4 +55,51 @@ cambiar la insignia lo hago en un solo lugar del CSS.
 
 **Lo que vi en DevTools**
 
-al activar hover vi que el boton cambiaba al pasar el cursor y con before y after que se le agrefaron 2 puntos en filtros y  se agrego oferta al lado de compra
+al activar hover vi que el boton cambiaba al pasar el cursor y con before y after que se le agrefaron 2 puntos en filtros y se agrego oferta al lado de compra
+
+
+
+# subatividadb 5
+## Hallazgos: Arquitectura BEM y Modularidad
+
+### 1. ¿Qué significa BEM y cómo se escribe?
+
+BEM significa **Block, Element, Modifier** (Bloque, Elemento, Modificador). Es una forma de ponerle nombre a las clases CSS para que se entienda a simple vista qué hace cada una y a qué parte de la página pertenece.
+
+Se escribe así:
+
+```
+bloque__elemento--modificador
+```
+
+- **Bloque:** el componente completo e independiente. Ejemplo: `.card`
+- **Elemento:** una parte que vive dentro del bloque, se une con doble guion bajo (`__`). Ejemplos: `.card__title`, `.card__price`, `.card__button`
+- **Modificador:** una variación del bloque o elemento, se une con doble guion medio (`--`). Ejemplos: `.card--destacada`, `.btn--secundario`
+
+En mi catálogo, la tarjeta de producto es el bloque `.card`, su título es `.card__title` y la tarjeta resaltada es `.card--destacada`.
+
+### 2. ¿Por qué dividir el CSS en varios archivos facilita el trabajo colaborativo?
+
+Antes tenía todo en un solo archivo `style.css` largo y difícil de leer. Ahora cada componente tiene su propio archivo (`tarjeta.css`, `botones.css` y `menu-lateral.css`) y todos se conectan con `@import`.
+
+Esto ayuda al trabajo en equipo porque:
+
+- Cada persona puede trabajar en un componente distinto sin pisar el trabajo de otra.
+- Se reducen los conflictos en Git, ya que es menos probable que dos personas editen el mismo archivo.
+- Es más fácil encontrar y corregir algo: si falla el botón, voy directo a `botones.css`.
+- El proyecto puede crecer a miles de líneas sin volverse un caos.
+
+### 3. ¿Cómo evita BEM la guerra de especificidad?
+
+La especificidad es el "peso" que el navegador le da a cada selector para decidir cuál estilo gana. Un selector anidado como `.producto h2` pesa más que una sola clase, y para sobrescribirlo hay que escribir otro todavía más pesado, y así se genera una "guerra" difícil de controlar.
+
+Con BEM todos los selectores son **una sola clase plana** (por ejemplo `.card__title`), y todos pesan lo mismo (10). Así:
+
+- No hay anidamientos que se sobrescriban entre sí.
+- El orden de la cascada es predecible: si dos reglas pesan igual, gana la que está después.
+- Se evitan los `id` (peso 100), como el antiguo `#btn-destacado`, que fue reemplazado por el modificador `.btn--destacado`.
+- Puedo agregar nuevos estilos sin miedo a que otro selector choque con ellos.
+
+### Nota técnica sobre `@import`
+
+La guía indica poner los `@import` debajo del `:root`. Sin embargo, en CSS un `@import` solo funciona si está **antes de cualquier otra regla**; si va después, el navegador lo ignora. Por eso los coloqué al inicio de `style.css`. Las variables del `:root` siguen disponibles en todos los módulos.
