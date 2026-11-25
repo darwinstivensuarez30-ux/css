@@ -103,3 +103,28 @@ Con BEM todos los selectores son **una sola clase plana** (por ejemplo `.card__t
 ### Nota técnica sobre `@import`
 
 La guía indica poner los `@import` debajo del `:root`. Sin embargo, en CSS un `@import` solo funciona si está **antes de cualquier otra regla**; si va después, el navegador lo ignora. Por eso los coloqué al inicio de `style.css`. Las variables del `:root` siguen disponibles en todos los módulos.
+
+
+## Hallazgos: Arquitectura Total con Flexbox
+
+### 1. ¿Por qué fue crucial aplicar `min-height: 100vh` y `flex-direction: column` al contenedor global?
+
+El contenedor `.app-layout` envuelve toda la página y usa `display: flex`, `flex-direction: column` y `min-height: 100vh`.
+
+- Con `min-height: 100vh` la página siempre ocupa al menos el 100% de la altura de la pantalla, aunque haya poco contenido.
+- Con `flex-direction: column` el header, el contenido central y el footer se apilan en vertical.
+- Como `.main-wrapper` tiene `flex: 1`, absorbe todo el espacio sobrante y **empuja el pie de página hacia el fondo**. Sin esto, el footer quedaba flotando a mitad de pantalla cuando había poco contenido.
+
+### 2. ¿Cómo reemplazó la propiedad `gap` el uso excesivo de márgenes laterales en los menús de navegación?
+
+Antes, para separar los enlaces había que ponerle márgenes laterales a cada `<li>`, y el primero o el último quedaban con un espacio sobrante en los extremos.
+
+Con `gap: var(--espaciado-medio)` en `.nav__list`, el espacio se aplica **solo entre** los elementos, de forma uniforme y desde un único lugar. Lo mismo hice en el menú lateral con `gap: var(--espaciado-grande)`. Además, como usa variables del `:root`, si quiero cambiar la separación en todo el sitio solo modifico un valor.
+
+### 3. ¿Cómo la unión de BEM, Custom Properties y Flexbox permitió una tarjeta resistente a distintos largos de texto?
+
+- **BEM:** me dio clases planas y claras (`.card`, `.card__description`, `.card__price-wrapper`, `.card__price-old`) para aplicar cada comportamiento a la parte exacta de la tarjeta, sin selectores anidados ni choques de especificidad.
+- **Custom Properties:** centralizan colores y espaciados en el `:root`, así que todos los módulos usan los mismos valores.
+- **Flexbox:** la `.card` es una columna flex. La descripción tiene `flex-grow: 1` y funciona como un resorte invisible que empuja el precio y el botón hacia abajo. El área de precios usa `justify-content: space-between` y `align-items: baseline` para alinear el precio de oferta con el precio original tachado en la misma línea base.
+
+El resultado es que, aunque una descripción sea más larga que otra, todas las tarjetas miden lo mismo y los botones "Comprar" quedan alineados al fondo.
